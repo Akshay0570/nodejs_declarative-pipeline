@@ -24,5 +24,13 @@ npm test'''
                 )
             }
         }
+        stage ('Exec npm publish') {
+            steps {
+                rtNpmPublish (
+                    tool: NPM_LOCAL, // Tool name from Jenkins configuration
+                    deployerId: "npm57"
+                )
+            }
+        }
     }
 }
