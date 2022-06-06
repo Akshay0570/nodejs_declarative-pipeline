@@ -7,11 +7,13 @@ pipeline{
                 git branch: 'main', url: 'https://github.com/Akshay0570/js-e2e-express-server.git'
             }
         }
-        stage('npm run,test and pack'){
+        stage('shell script'){
             steps{
-                rtNpmInstall(
-                    tool: 'nodejsv10.19.0'
-                )
+              sh '''sudo apt update
+npm install
+npm rub build
+npm pack
+npm test'''
             }
         }
         stage('diployer'){
