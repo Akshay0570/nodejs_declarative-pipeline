@@ -10,8 +10,7 @@ pipeline{
         stage('npm run,test and pack'){
             steps{
                 rtNpmInstall(
-                    tool: nodejsv10.19.0
-
+                    tool: 'nodejsv10.19.0'
                 )
             }
         }
