@@ -17,9 +17,9 @@ pipeline{
         stage('diployer'){
             steps{
                 rtNpmDeployer(
-                    id: practice
-                    serverId: Jfrog
-                    repo: default-npm-local
+                    id: 'practice',
+                    serverId: 'Jfrog',
+                    repo: 'default-npm-local'
                 )
             }
         }
