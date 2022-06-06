@@ -1,0 +1,16 @@
+---
+name: npm and nodejs installation
+become: yes
+hosts: all
+tasks:
+  - name: update cache and repo
+    apt:
+      update_cache: yes
+  - name: install nodejs & npm
+    apt:
+      name: 
+        - nodejs
+        - npm
+      state: latest
+      update_cache: yes
+  
