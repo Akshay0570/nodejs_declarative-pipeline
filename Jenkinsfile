@@ -10,8 +10,7 @@ pipeline{
         stage('shell script'){
             steps{
               sh '''sudo apt update
-npm install
-npm rub build
+npm run build
 npm pack
 npm test'''
             }
