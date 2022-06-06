@@ -1,14 +1,14 @@
 ---
-  - name: install npm
+  - name: install npm nodejs blablabla
     become: yes
     hosts: all
     tasks:
       - name: update cache and repositories
         apt:
           update_cache: yes
-      - name: install nodejs
+      - name: installing dependencies
         apt:
-          name: 
+          name:
             - nodejs
             - npm
           state: latest 
