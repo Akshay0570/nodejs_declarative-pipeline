@@ -6,8 +6,8 @@ pipeline{
                 ansiblePlaybook become: true, 
                 credentialsId: 'd05c9c88-81fc-44a3-bae4-d5bf7f74fa7b',
                 installation: 'Ansible', 
-                inventory: '/home/ubuntu/hosts',
-                playbook: '/home/ubuntu/ansible.yaml'
+                inventory: '**/hosts',
+                playbook: '**/ansible.yaml'
             }
         }
     }
